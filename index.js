@@ -11,7 +11,7 @@ const client = new Client({
 
 let inviteCounts = new Map(); 
 let invitedUsers = new Map(); 
-const logChannelId = ""; // حط ايدي روم اللوق
+const logChannelId = "1434646141932277841"; // حط ايدي روم اللوق
 
 client.once('ready', () => {
     console.log('Developer By : 3nB.');
@@ -75,7 +75,7 @@ client.on('interactionCreate', async (interaction) => {
     if (interaction.customId === 'normal_spin') {
         spinType = 'العجلة العادية';
         if (userInvites >= 1) {
-            const spinNormal = ["", "", "", "", "", "", "", ""]; // المكافات
+            const spinNormal = ["20k", "40k", "60k", "50k", "65k", "10k", "30k", "حظ اوفر"]; // المكافات
             reward = spinNormal[Math.floor(Math.random() * spinNormal.length)];
             updateUserInvites(interaction.user.id, userInvites - 1);
             await interaction.reply({ content: `فزت معنا : ${reward}`, ephemeral: true });
